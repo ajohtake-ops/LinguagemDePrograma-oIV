@@ -14,11 +14,11 @@
         <form method="post">
             <div class="mb-3">
                 <label for="alturaRet" class="form-label">Insira a altura do retângulo (cm):</label>
-                <input type="number" id="alturaRet" name="alturaRet" class="form-control" required="">
+                <input type="number" id="alturaRet" step="any" name="alturaRet" class="form-control" required="">
             </div>
             <div class="mb-3">
                 <label for="larguraRet" class="form-label">Insira a largura do retângulo (cm): </label>
-                <input type="text" id="larguraRet" name="larguraRet" class="form-control" required="">
+                <input type="text" id="larguraRet" step="any" name="larguraRet" class="form-control" required="">
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>

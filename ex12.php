@@ -4,29 +4,32 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Exercício 7</title>
+    <title>exercício 12</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="container py-3">
-        <h1>Exercício 7</h1>
+        <h1>exercício 12</h1>
         <form method="post">
             <div class="mb-3">
-                <label for="nota1" class="form-label">Insira o valor da temperatura em Fahrenheit:</label>
-                <input type="number" id="nota1" step="any" name="tempF" class="form-control" required="">
+                <label for="base" class="form-label">Insira o valor da base:</label>
+                <input type="number" id="base" name="base" class="form-control" required="">
+            </div>
+            <div class="mb-3">
+                <label for="expoente" class="form-label">Insira o valor do expoente:</label>
+                <input type="number" id="expoente" name="expoente" class="form-control" required="">
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
         <?php
 
-            if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            if($_SERVER['REQUEST_METHOD'] = 'POST'){
+                $base = $_POST['base'];
+                $expoente = $_POST ['expoente'];
 
-                $tempF = $_POST['tempF'];
-
-                $tempC = ($tempF - 32) * (5/9);
-
-                echo "A temperatura em Celsius é de: $tempC";
+                $resultado = $base ** $expoente;
+                echo "O resultado da potenciação é: $resultado.";
             }
 
         ?>

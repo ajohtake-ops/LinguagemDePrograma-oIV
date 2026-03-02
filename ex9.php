@@ -14,7 +14,7 @@
         <form method="post">
             <div class="mb-3">
                 <label for="raioC" class="form-label">Insira o valor do raio do círculo (cm)</label>
-                <input type="text" id="raioC" name="raioC" class="form-control" required="">
+                <input type="text" id="raioC" step="any" name="raioC" class="form-control" required="">
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>

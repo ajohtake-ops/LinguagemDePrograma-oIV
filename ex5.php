@@ -14,15 +14,15 @@
         <form method="post">
             <div class="mb-3">
                 <label for="nota1" class="form-label">Insira o valor da primeira nota:</label>
-                <input type="number" id="nota1" name="nota1" class="form-control" required="">
+                <input type="number" id="nota1" step="any" name="nota1" class="form-control" required="">
             </div>
             <div class="mb-3">
                 <label for="nota2" class="form-label">Insira o valor da segunda nota:</label>
-                <input type="number" id="nota2" name="nota2" class="form-control" required="">
+                <input type="number" id="nota2" step="any" name="nota2" class="form-control" required="">
             </div>
             <div class="mb-3">
                 <label for="nota3" class="form-label">Insira o valor da terceira nota</label>
-                <input type="number" id="nota3" name="nota3" class="form-control" required="">
+                <input type="number" id="nota3" step="any" name="nota3" class="form-control" required="">
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>

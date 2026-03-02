@@ -14,7 +14,7 @@
         <form method="post">
             <div class="mb-3">
                 <label for="nota1" class="form-label">Insira o valor da temperatura em Celsius:</label>
-                <input type="number" id="nota1" name="tempCelsius" class="form-control" required="">
+                <input type="number" id="nota1" step="any" name="tempCelsius" class="form-control" required="">
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
