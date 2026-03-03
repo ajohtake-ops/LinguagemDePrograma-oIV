@@ -26,14 +26,14 @@
             $peso = $_POST['peso'];
             $altura = $_POST['altura'];
             $resultado = $peso / ($altura ** 2);
-            echo "O resultado do seu IMC é: $resultado.";
+            echo "<p>O resultado do seu IMC é: $resultado.</p>";
 
             if ($resultado < 18.5) {
-                echo "\nVocê está abaixo do peso.";
+                echo "<p>Você está abaixo do peso. </p?";
             } elseif ($resultado >= 18.5 & $resultado < 25) {
-                echo "\nVocẽ está no peso adequado";
+                echo "<p>Vocẽ está no peso adequado</p>";
             } elseif ($resultado >= 25) {
-                echo "\nVocê está acima do peso.";
+                echo "<p>Você está acima do peso.</p>";
             }
         }
 
