@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exercício 5 bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        .row {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="container" style="justify-content: center; display: flex;">
+            <div>
+                <div class="col-3"
+                    style="border: 2px solid rgb(216, 216, 216); padding: 20px; border-radius: 5px; background-color:rgb(216, 216, 216); width: auto; margin-top: 10px;">
+                    <h1 style="font-weight: bold ;">Billing Adress</h1>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="name" class="form-label">First Name:</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="col">
+                            <label class="form-label" for="sobrenome">Last Name:</label>
+                            <input type="text" class="form-control" id="sobrenome" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label class="form-label" for="apelido">Username:</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">@</span>
+                                <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label class="form-label" for="email">Email </label><label
+                                style="opacity: 0.5; margin-left: 2px;">(Optional)</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label class="form-label" for="endereco">Adress</label>
+                            <input type="text" class="form-control" id="endereco" placeholder="1234 Main Street"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label class="form-label" for="endereco2">Adress 2</label><label
+                                style="opacity: 0.5; margin-left: 2px;">(Optional)</label>
+                            <input type="text" class="form-control" id="endereco2" placeholder="Apartment or suite">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="country" class="form-label">Country</label>
+                            <select class="form-select" aria-label="status" required>
+                                <option selected>-</option>
+                                <option value="1">Brazil</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label class="form-label" for="state">State</label>
+                            <select class="form-select" aria-label="status" required>
+                                <option selected>-</option>
+                                <option value="1">São Paulo</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label class="form-label" for="zip">Zip</label>
+                            <input type="number" class="form-control" id="zip" maxlength="8" required>
+                        </div>
+                    </div>
+
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+                        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+                        crossorigin="anonymous"></script>
+                </div>
+                <input type="reset" class="btn btn-outline-secondary" value="Limpar"
+                    style="float: right; margin-top: 5px;">
+                <input type="submit" class="btn btn-primary" value="Enviar"
+                    style="float: right; margin-top: 5px; margin-right: 5px;">
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
