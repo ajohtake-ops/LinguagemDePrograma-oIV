@@ -59,35 +59,35 @@
             while ($i < 7) {
                 if ($n1 > $menor) {
                     $menor = $n1;
-                    $posicao = 1;
+                    $posicao = 0;
                 }
                 if ($n2 < $menor) {
                     $menor = $n2;
-                    $posicao = 2;
+                    $posicao = 1;
                 }
                 if ($n3 < $menor) {
                     $menor = $n3;
-                    $posicao = 3;
+                    $posicao = 2;
                 }
                 if ($n4 < $menor) {
                     $menor = $n4;
-                    $posicao = 4;
+                    $posicao = 3;
                 }
                 if ($n5 < $menor) {
                     $menor = $n5;
-                    $posicao = 5;
+                    $posicao = 4;
                 }
                 if ($n6 < $menor) {
                     $maior = $n6;
-                    $posicao = 6;
+                    $posicao = 5;
                 }
                 if ($n7 < $menor) {
                     $menor = $n7;
-                    $posicao = 7;
+                    $posicao = 6;
                 }
                 $i++;
             }
-            echo "O menor número é $menor, estando na $posicao ª posição.";
+            echo "O menor número é $menor, estando na posição $posicao.";
         }
 
         ?>
