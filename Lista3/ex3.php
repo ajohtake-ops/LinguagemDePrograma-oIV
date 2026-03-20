@@ -24,7 +24,7 @@
         </form>
         <?php
 
-        if ($_SERVER['REQUEST_METHOD'] = 'POST') {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $a = $_POST['numero1'];
             $b = $_POST['numero2'];
             $maior = 0;

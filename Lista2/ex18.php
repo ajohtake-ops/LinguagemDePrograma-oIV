@@ -28,7 +28,7 @@
         </form>
         <?php
 
-        if ($_SERVER['REQUEST_METHOD'] = 'POST') {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $capital = $_POST['capital'];
             $juros = $_POST['juros'];
             $periodo = $_POST['periodo'];

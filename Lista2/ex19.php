@@ -20,7 +20,7 @@
         </form>
         <?php
 
-        if ($_SERVER['REQUEST_METHOD'] = 'POST') {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $dia = $_POST['dia'];
 
             $hora = $dia * 24;

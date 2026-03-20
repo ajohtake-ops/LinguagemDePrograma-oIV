@@ -4,31 +4,30 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ex8</title>
+    <title>Exercício 11</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="container py-3">
-        <h1>Ex8</h1>
+        <h1>Exercício 11</h1>
         <form method="post">
             <div class="mb-3">
-                <label for="numero" class="form-label">Insira um número: </label>
-                <input type="number" id="numero" name="numero" class="form-control" required="">
+                <label for="valor" class="form-label">Insira um valor:</label>
+                <input type="number" id="valor" step="any" name="valor" class="form-control" required="">
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
         <?php
+        
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $n = $_POST['valor'];
 
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $n = $_POST['numero'];
+            $n_formatado = number_format($n, 2,',','.');
 
-            echo"<br>CONTAGEM REGRESSIVA:</br>";
-            do{
-                echo"$n";
-            }while($n >= 0);
-            
+            echo "<br>Valor formatado em moeda brasileira:  R$$n_formatado.</br>";
         }
+        
         ?>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
     </div>

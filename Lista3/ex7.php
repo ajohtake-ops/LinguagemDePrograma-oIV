@@ -20,7 +20,7 @@
         </form>
         <?php
 
-        if ($_SERVER['REQUEST_METHOD'] = 'POST') {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $n = $_POST['numero'];
             $i = 0;
             $soma = 0;

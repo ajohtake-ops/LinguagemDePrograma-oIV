@@ -20,7 +20,7 @@
         </form>
         <?php
 
-            if($_SERVER['REQUEST_METHOD'] = 'POST'){
+            if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 $km = $_POST['km'];
 
                 $resultado = $km / 1.609;

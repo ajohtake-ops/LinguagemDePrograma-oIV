@@ -23,7 +23,7 @@
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
         <?php
-        if ($_SERVER['REQUEST_METHOD'] = 'POST') {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $preco = $_POST['preco'];
             $desconto = $_POST['desconto'];
 

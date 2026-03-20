@@ -24,7 +24,7 @@
         </form>
         <?php
 
-            if($_SERVER['REQUEST_METHOD'] = 'POST'){
+            if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 $base = $_POST['base'];
                 $expoente = $_POST ['expoente'];
 

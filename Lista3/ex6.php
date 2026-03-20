@@ -20,7 +20,7 @@
         </form>
         <?php
 
-        if ($_SERVER['REQUEST_METHOD'] = 'POST') {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $n = $_POST['numero'];
 
             echo "<br>A sequência do 1 até o número inserido.</br>";

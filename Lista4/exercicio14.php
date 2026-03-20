@@ -4,30 +4,31 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ex8</title>
+    <title>Exercício 14 PHP</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="container py-3">
-        <h1>Ex8</h1>
+        <h1>Exercício 14 PHP</h1>
         <form method="post">
             <div class="mb-3">
-                <label for="numero" class="form-label">Insira um número: </label>
-                <input type="number" id="numero" name="numero" class="form-control" required="">
+                <label for="palavra" class="form-label">Digite uma palavra</label>
+                <input type="text" id="palavra" name="palavra" class="form-control" required="">
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
         <?php
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $n = $_POST['numero'];
+            $palavra = $_POST['palavra'];
 
-            echo"<br>CONTAGEM REGRESSIVA:</br>";
-            do{
-                echo"$n";
-            }while($n >= 0);
-            
+            if($palavra == strrev($palavra)){
+                echo "<br>A palavra ($palavra) é um palíndromo.</br>";
+            }
+            else{
+                echo "<br>A palavra ($palavra) não é um palíndromo.</br>";
+            }
         }
         ?>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>

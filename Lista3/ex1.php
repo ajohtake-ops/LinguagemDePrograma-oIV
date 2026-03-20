@@ -44,7 +44,7 @@
         </form>
         <?php
 
-        if ($_SERVER['REQUEST_METHOD'] = 'POST') {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $i = 0;
             $menor = 0;
             $posicao = 0;

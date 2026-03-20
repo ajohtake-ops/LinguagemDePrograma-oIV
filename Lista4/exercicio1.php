@@ -20,7 +20,7 @@
         </form>
         <?php
 
-        if ($_SERVER['REQUEST_METHOD'] = 'POST') {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $palavra = $_POST['palavra'];
 
             echo "A quantidade de caracteres da palavra é de: ", mb_strlen($palavra);

@@ -24,7 +24,7 @@
         </form>
         <?php
 
-        if ($_SERVER['REQUEST_METHOD'] = 'POST') {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $n1 = $_POST['numero1'];
             $n2 = $_POST['numero2'];
 

@@ -20,7 +20,7 @@
         </form>
         <?php
 
-        if ($_SERVER['REQUEST_METHOD'] = 'POST') {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $nome = $_POST['nome'];
 
             $iniciais = str_replace(range('a','z'),'',$nome);

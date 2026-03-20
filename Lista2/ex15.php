@@ -22,7 +22,7 @@
         </form>
         <?php
 
-        if ($_SERVER['REQUEST_METHOD'] = 'POST') {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $peso = $_POST['peso'];
             $altura = $_POST['altura'];
             $resultado = $peso / ($altura ** 2);

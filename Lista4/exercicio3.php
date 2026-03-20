@@ -24,7 +24,7 @@
         </form>
         <?php
 
-        if ($_SERVER['REQUEST_METHOD'] = 'POST') {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $palavra1 = $_POST['palavra1'];
             $palavra2 = $_POST['palavra2'];
 
