@@ -53,7 +53,7 @@
                 <input type="number" id="qtd5" name="qtd[]" class="form-control" required>
             </div>
 
-            <button type="submit" class="btn btn-primary w-100">Enviar Estoque</button>
+            <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
 
         <?php
