@@ -98,10 +98,12 @@
                     $preco_alterado = $pre - ($pre * (10/100));
                     $pre = $preco_alterado;
                 }
-                $lista[$codigo] = [
-                    'nome' => $prod,
-                    'preco' => $pre
-                    ];
+                if(!empty($codigo)){
+                    $lista[$codigo] = [
+                        'nome' => $prod,
+                        'preco' => $pre
+                        ];
+                    }
             }
             uasort($lista, function($a, $b) {
                 return $a['preco'] <=> $b['preco'];

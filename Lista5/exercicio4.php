@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Exercício 3 - Cadastro de Produtos</title>
+    <title>Exercício 4 - Cadastro de Produtos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -69,7 +69,9 @@
 
                     $preco_alterado = $preco + ($preco * (15/100));
 
-                    $lista[$produto] = $preco_alterado;
+                    if(!empty($produto)){
+                        $lista[$produto] = $preco_alterado;
+                    }
                 }
                 ksort($lista);
 

@@ -112,7 +112,9 @@
             foreach ($alunos as $i => $aluno) {
                 $aluno = trim($aluno);
                 $media = ((float)$nota1[$i] + (float)$nota2[$i] + (float)$nota3[$i]) / 3;
-                $lista[$aluno] = number_format($media, 2);
+                if(!empty($aluno)){
+                    $lista[$aluno] = number_format($media, 2);
+                }
             }
             arsort($lista);
 

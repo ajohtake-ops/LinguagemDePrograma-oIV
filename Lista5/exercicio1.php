@@ -77,7 +77,9 @@
                     } elseif (in_array($tel, $lista_final)) {
                         echo "Telefone duplicado!";
                     } else {
-                        $lista_final[$nome] = $tel;
+                        if(!empty($nome)){
+                            $lista_final[$nome] = $tel;
+                        }
                     }
                 }
                 ksort($lista_final);
