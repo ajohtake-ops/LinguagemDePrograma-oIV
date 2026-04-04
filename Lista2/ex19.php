@@ -27,9 +27,9 @@
             $minuto = $hora * 60;
             $segundo = $minuto * 60;
 
-            echo "<p>$dias dias em horas: $hora</p>";
-            echo "<p>$dias em minutos: $minuto</p>";
-            echo "<p>$dias em segundos: $segundo</p>";
+            echo "<p>$dia dias em horas: $hora</p>";
+            echo "<p>$dia em minutos: $minuto</p>";
+            echo "<p>$dia em segundos: $segundo</p>";
         }
 
         ?>
