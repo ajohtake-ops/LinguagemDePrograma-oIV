@@ -27,7 +27,7 @@
     </form>
 
     <?php
-      require_once('conexao.php');
+      require_once('Conexao.php');
       session_start();
       if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         $email = $_POST['email'];
@@ -40,7 +40,7 @@
           if($usuario && $senha_correta){
             $_SESSION['nome'] = $usuario['nome'];
             $_SESSION['acesso'] = true; 
-            header('Location: principal.php');
+            header('Location: Principal.php');
           } else {
             echo "<p class='text-danger'>Credenciais inválidas!</p>";
           }
@@ -51,7 +51,7 @@
     ?>
 
     <p class="text-center mt-3">
-      Não tem conta? <a href="cadastro.php">Cadastre-se</a>
+      Não tem conta? <a href="Cadastro.php">Cadastre-se</a>
     </p>
   </div>
 </div>

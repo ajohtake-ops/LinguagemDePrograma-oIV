@@ -1,6 +1,6 @@
 <?php
-    require_once('cabecalho.php');
-    require_once('conexao.php');
+    require_once('Cabecalho.php');
+    require_once('Conexao.php');
     try{
         $stmt = 
             $pdo->prepare('SELECT i.*, e.nome as evento_nome, c.nome as cliente_nome 
@@ -17,7 +17,7 @@
 
 <h1>Consultar Ingresso</h1>
     <form method="post" 
-        action="consultar_ingresso.php?id=<?= $resultado['id'] ?>">
+        action="ConsultarIngresso.php?id=<?= $resultado['id'] ?>">
         <div class="mb-3">
               <p><strong>Evento:</strong> 
                  <?= $resultado['evento_nome'] ?> 
@@ -47,7 +47,7 @@
                 $sql = "DELETE FROM Ingresso WHERE id = ?";
                 $stmt = $pdo->prepare($sql);
                 if($stmt->execute([$id])){
-                    header('Location: ingressos.php');
+                    header('Location: Ingressos.php');
                 } else {
                     echo "Erro ao excluir!";
                 }
@@ -57,4 +57,4 @@
         }
     ?>
 <?php
-    require_once('rodape.php');
+    require_once('Rodape.php');

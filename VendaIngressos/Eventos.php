@@ -1,6 +1,6 @@
 <?php
-    require_once('cabecalho.php');
-    require_once('conexao.php');
+    require_once('Cabecalho.php');
+    require_once('Conexao.php');
     try{
         $stmt = $pdo->query('SELECT * FROM Evento');
         $resultado = $stmt->fetchAll();
@@ -10,7 +10,7 @@
 ?>
 
 <h2>Eventos</h2>
-    <a href="novo_evento.php" class="btn btn-success mb-3">Novo Registro</a>
+    <a href="NovoEvento.php" class="btn btn-success mb-3">Novo Registro</a>
     <table class="table table-hover table-striped">
     <thead>
         <tr>
@@ -29,8 +29,8 @@
             <td><?= $r['local'] ?></td>
             <td><?= $r['cidade'] ?></td>
             <td class="d-flex gap-2">
-            <a href="alterar_evento.php?id=<?= $r['id'] ?>" class="btn btn-sm btn-warning">Editar</a>
-            <a href="consultar_evento.php?id=<?= $r['id'] ?>" class="btn btn-sm btn-info">Consultar</a>
+            <a href="AlterarEvento.php?id=<?= $r['id'] ?>" class="btn btn-sm btn-warning">Editar</a>
+            <a href="ConsultarEvento.php?id=<?= $r['id'] ?>" class="btn btn-sm btn-info">Consultar</a>
             </td>
         </tr>
         <?php endforeach; ?>
@@ -38,4 +38,4 @@
     </table>
 
 <?php
-    require_once('rodape.php');
+    require_once('Rodape.php');

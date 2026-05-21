@@ -1,5 +1,5 @@
 <?php
-    require_once('cabecalho.php');
+    require_once('Cabecalho.php');
 ?>
 
 <h1>Novo Cliente</h1>
@@ -20,7 +20,7 @@
     </form>
     <?php
       if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-        require_once('conexao.php');
+        require_once('Conexao.php');
         $nome = $_POST['nome'];
         $cpf = $_POST['cpf'];
         $telefone = $_POST['telefone'];
@@ -38,4 +38,4 @@
     ?>
 
 <?php
-    require_once('rodape.php');
+    require_once('Rodape.php');

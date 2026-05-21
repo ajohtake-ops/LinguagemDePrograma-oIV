@@ -1,6 +1,6 @@
 <?php
-    require_once('cabecalho.php');
-    require_once('conexao.php');
+    require_once('Cabecalho.php');
+    require_once('Conexao.php');
     try{
       $stmt_eventos = $pdo->query("SELECT * FROM Evento");
       $eventos = $stmt_eventos->fetchAll();
@@ -46,7 +46,7 @@
     </form>
     <?php
       if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-        require_once('conexao.php');
+        require_once('Conexao.php');
         $evento = $_POST['evento'];
         $cliente = $_POST['cliente'];
         $valor = $_POST['valor'];
@@ -65,4 +65,4 @@
     ?>
 
 <?php
-    require_once('rodape.php');
+    require_once('Rodape.php');

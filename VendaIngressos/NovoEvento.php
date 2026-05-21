@@ -1,5 +1,5 @@
 <?php
-    require_once('cabecalho.php');
+    require_once('Cabecalho.php');
 ?>
 
 <h1>Novo Evento</h1>
@@ -32,7 +32,7 @@
     </form>
     <?php
       if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-        require_once('conexao.php');
+        require_once('Conexao.php');
         $nome = $_POST['nome'];
         $local = $_POST['local'];
         $cidade = $_POST['cidade'];
@@ -53,4 +53,4 @@
     ?>
 
 <?php
-    require_once('rodape.php');
+    require_once('Rodape.php');

@@ -1,6 +1,6 @@
 <?php
-    require_once('cabecalho.php');
-    require_once('conexao.php');
+    require_once('Cabecalho.php');
+    require_once('Conexao.php');
     try{
         $stmt = $pdo->query('SELECT i.*, e.nome as evento_nome, c.nome as cliente_nome 
                              FROM Ingresso i
@@ -13,7 +13,7 @@
 ?>
 
 <h2>Ingressos</h2>
-    <a href="novo_ingresso.php" class="btn btn-success mb-3">Novo Registro</a>
+    <a href="NovoIngresso.php" class="btn btn-success mb-3">Novo Registro</a>
     <table class="table table-hover table-striped">
     <thead>
         <tr>
@@ -34,8 +34,8 @@
             <td>R$ <?= number_format($r['valor'], 2, ',', '.') ?></td>
             <td><?= $r['status'] ?></td>
             <td class="d-flex gap-2">
-            <a href="alterar_ingresso.php?id=<?= $r['id'] ?>" class="btn btn-sm btn-warning">Editar</a>
-            <a href="consultar_ingresso.php?id=<?= $r['id'] ?>" class="btn btn-sm btn-info">Consultar</a>
+            <a href="AlterarIngresso.php?id=<?= $r['id'] ?>" class="btn btn-sm btn-warning">Editar</a>
+            <a href="ConsultarIngresso.php?id=<?= $r['id'] ?>" class="btn btn-sm btn-info">Consultar</a>
             </td>
         </tr>
         <?php endforeach; ?>
@@ -43,4 +43,4 @@
     </table>
 
 <?php
-    require_once('rodape.php');
+    require_once('Rodape.php');
