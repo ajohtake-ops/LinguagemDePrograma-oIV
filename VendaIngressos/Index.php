@@ -10,7 +10,7 @@
 
 <div class="container d-flex justify-content-center align-items-center vh-100">
   <div class="card shadow p-4" style="width: 100%; max-width: 400px;">
-    <h3 class="text-center mb-4">Sistema de Controle de Estoque</h3>
+    <h3 class="text-center mb-4">Venda de Ingressos</h3>
 
     <form method="post">
       <div class="mb-3">
@@ -33,7 +33,7 @@
         $email = $_POST['email'];
         $senha = $_POST['senha'];
         try{
-          $stmt = $pdo->prepare("SELECT * FROM usuarios WHERE email = ?");
+          $stmt = $pdo->prepare("SELECT * FROM Usuario WHERE email = ?");
           $stmt->execute([$email]);
           $usuario = $stmt->fetch();
           $senha_correta = password_verify($senha, $usuario['senha']);

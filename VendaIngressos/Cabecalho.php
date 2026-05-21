@@ -1,7 +1,7 @@
 <?php
     session_start();
     if (!isset($_SESSION['acesso']) || $_SESSION['acesso'] == false){
-        header('Location: index.php');
+        header('Location: Index.php');
         exit();
     }
 ?>
@@ -17,34 +17,35 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    <a class="navbar-brand" href="#">Sistema</a>
+    <a class="navbar-brand" href="#">Venda de Ingressos</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Alternar navegação">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">      
         <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="principal.php">Início</a>
+            <a class="nav-link" aria-current="page" href="Principal.php">Início</a>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Funções Básicas
+                Gerenciamento
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdown2">
-                <li><a class="dropdown-item" href="categorias.php">Categorias</a></li>
-                <li><a class="dropdown-item" href="produtos.php">Produtos</a></li>
+                <li><a class="dropdown-item" href="Eventos.php">Eventos</a></li>
+                <li><a class="dropdown-item" href="Ingressos.php">Ingressos</a></li>
+                <li><a class="dropdown-item" href="Clientes.php">Clientes</a></li>
             </ul>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Funções de Saída
+                Relatórios
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdown3">
-                <li><a class="dropdown-item" href="#">Relatório de Produtos</a></li>
+                <li><a class="dropdown-item" href="#">Relatório de Vendas</a></li>
             </ul>
         </li>
         <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="logout.php">Sair</a>
+            <a class="nav-link" aria-current="page" href="Logout.php">Sair</a>
         </li>
       </ul>
     </div>

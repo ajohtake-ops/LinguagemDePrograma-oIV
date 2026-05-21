@@ -33,12 +33,12 @@
 
     <?php
       if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-        require_once('conexao.php');
+        require_once('Conexao.php');
         $nome = $_POST['nome'];
         $email = $_POST['email'];
         $senha = password_hash($_POST['senha'], PASSWORD_BCRYPT);
         try{
-          $stmt = $pdo->prepare('INSERT INTO usuarios (nome, email, senha)
+          $stmt = $pdo->prepare('INSERT INTO Usuario (nome, email, senha)
                                   VALUES (? , ?, ?);');
           if($stmt->execute([$nome, $email, $senha])){
             echo "<p>Cadastro realizado! Faça o login!</p>";
@@ -52,7 +52,7 @@
     ?>
 
     <p class="text-center mt-3">
-      Já tem conta? <a href="index.php">Faça login</a>
+      Já tem conta? <a href="Index.php">Faça login</a>
     </p>
   </div>
 </div>
