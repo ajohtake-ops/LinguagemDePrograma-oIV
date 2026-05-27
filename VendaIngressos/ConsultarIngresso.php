@@ -38,6 +38,16 @@
                  <?= $resultado['status'] ?> 
               </p>
         </div>
+        <div class="mb-3">
+              <p><strong>Data da Venda:</strong> 
+                 <?= $resultado['data_venda'] ? date('d/m/Y', strtotime($resultado['data_venda'])) : "Não informada" ?> 
+              </p>
+        </div>
+        <div class="mb-3">
+              <p><strong>Forma de Pagamento:</strong> 
+                 <?= $resultado['forma_pagamento'] ?: "Não informada" ?> 
+              </p>
+        </div>
         <button type="submit" class="btn btn-danger">Excluir</button>
     </form>
     <?php

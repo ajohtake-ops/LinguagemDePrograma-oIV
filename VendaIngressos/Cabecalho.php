@@ -15,19 +15,19 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg" style="background-color: #FF8C00;">
   <div class="container">
-    <a class="navbar-brand" href="#">Venda de Ingressos</a>
+    <a class="navbar-brand" href="#" style="color: black;">Venda de Ingressos</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Alternar navegação">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">      
         <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="Principal.php">Início</a>
+            <a class="nav-link" aria-current="page" href="Principal.php" style="color: black;">Início</a>
         </li>
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
                 Gerenciamento
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdown2">
@@ -37,15 +37,15 @@
             </ul>
         </li>
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
                 Relatórios
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdown3">
-                <li><a class="dropdown-item" href="#">Relatório de Vendas</a></li>
+                <li><a class="dropdown-item" href="RelatorioVendas.php">Relatório de Vendas</a></li>
             </ul>
         </li>
         <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="Logout.php">Sair</a>
+            <a class="nav-link" aria-current="page" href="Logout.php" style="color: black;">Sair</a>
         </li>
       </ul>
     </div>

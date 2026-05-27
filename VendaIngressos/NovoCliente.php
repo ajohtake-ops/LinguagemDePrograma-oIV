@@ -10,11 +10,11 @@
         </div>
         <div class="mb-3">
               <label for="cpf" class="form-label">CPF</label>
-              <input type="number" id="cpf" name="cpf" class="form-control" required="">
+              <input type="text" id="cpf" name="cpf" class="form-control" required="">
         </div>
         <div class="mb-3">
               <label for="telefone" class="form-label">Telefone</label>
-              <input type="number" id="telefone" name="telefone" class="form-control" required="">
+              <input type="text" id="telefone" name="telefone" class="form-control" required="">
         </div>
         <button type="submit" class="btn btn-primary">Enviar</button>
     </form>

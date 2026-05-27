@@ -42,6 +42,20 @@
                   <option value="Reservado">Reservado</option>
               </select>
         </div>
+        <div class="mb-3">
+              <label for="data_venda" class="form-label">Data da Venda</label>
+              <input type="date" id="data_venda" name="data_venda" class="form-control">
+        </div>
+        <div class="mb-3">
+              <label for="forma_pagamento" class="form-label">Forma de Pagamento</label>
+              <select name="forma_pagamento" id="forma_pagamento" class="form-select">
+                  <option value="">Selecione...</option>
+                  <option value="Dinheiro">Dinheiro</option>
+                  <option value="Cartão de Crédito">Cartão de Crédito</option>
+                  <option value="Cartão de Débito">Cartão de Débito</option>
+                  <option value="PIX">PIX</option>
+              </select>
+        </div>
         <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
     <?php
@@ -51,9 +65,11 @@
         $cliente = $_POST['cliente'];
         $valor = $_POST['valor'];
         $status = $_POST['status'];
+        $data_venda = $_POST['data_venda'];
+        $forma_pagamento = $_POST['forma_pagamento'];
         try{
-          $stmt = $pdo->prepare('INSERT INTO Ingresso (status, valor, Cliente_id, Evento_id) VALUES (?, ?, ?, ?);');
-          if($stmt->execute([$status, $valor, $cliente, $evento])){
+          $stmt = $pdo->prepare('INSERT INTO Ingresso (status, valor, Cliente_id, Evento_id, data_venda, forma_pagamento) VALUES (?, ?, ?, ?, ?, ?);');
+          if($stmt->execute([$status, $valor, $cliente, $evento, $data_venda, $forma_pagamento])){
             echo "<p>Cadastro realizado!</p>";
           } else {
             echo "<p>Erro ao cadastrar! Tente novamente</p>";

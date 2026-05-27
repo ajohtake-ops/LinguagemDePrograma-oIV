@@ -32,8 +32,8 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `VendaIngressos`.`Cliente` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(255) NOT NULL,
-  `cpf` INT(11) NOT NULL,
-  `telefone` INT(11) NOT NULL,
+  `cpf` VARCHAR(20) NOT NULL,
+  `telefone` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -43,12 +43,12 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `VendaIngressos`.`Evento` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(255) NULL,
-  `local` VARCHAR(255) NULL,
-  `cidade` VARCHAR(255) NULL,
-  `estado` VARCHAR(255) NULL,
-  `data_inicio` DATETIME NULL,
-  `data_termino` DATETIME NULL,
+  `nome` VARCHAR(255) NOT NULL,
+  `local` VARCHAR(255) NOT NULL,
+  `cidade` VARCHAR(255) NOT NULL,
+  `estado` VARCHAR(255) NOT NULL,
+  `data_inicio` DATETIME NOT NULL,
+  `data_termino` DATETIME NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -60,11 +60,13 @@ CREATE TABLE IF NOT EXISTS `VendaIngressos`.`Ingresso` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `status` VARCHAR(255) NOT NULL,
   `valor` DECIMAL(8,2) NOT NULL,
+  `data_venda` DATE NULL,
+  `forma_pagamento` VARCHAR(255) NULL,
   `Cliente_id` INT NOT NULL,
   `Evento_id` INT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_Ingresso_Cliente_idx` (`Cliente_id` ASC) ,
-  INDEX `fk_Ingresso_Evento1_idx` (`Evento_id` ASC) ,
+  INDEX `fk_Ingresso_Evento1_idx` (`Evento_id` ASC),
   CONSTRAINT `fk_Ingresso_Cliente`
     FOREIGN KEY (`Cliente_id`)
     REFERENCES `VendaIngressos`.`Cliente` (`id`)
