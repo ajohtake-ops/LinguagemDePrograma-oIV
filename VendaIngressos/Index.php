@@ -3,27 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sistema</title>
+  <title>Entrar — Venda de Ingressos</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
-<body class="bg-light">
+<body class="auth-page">
 
-<div class="container d-flex justify-content-center align-items-center vh-100">
-  <div class="card shadow p-4" style="width: 100%; max-width: 400px;">
-    <h3 class="text-center mb-4">Venda de Ingressos</h3>
+<div class="auth-wrapper">
+  <div class="auth-card">
+
+    <div class="auth-logo">
+      <div class="auth-logo-icon">🎟</div>
+      <h1>Venda de Ingressos</h1>
+      <p>Sistema de Gestão</p>
+    </div>
 
     <form method="post">
       <div class="mb-3">
-        <label class="form-label">Email</label>
-        <input name="email" type="email" class="form-control" placeholder="Digite seu email" required>
+        <label class="form-label">E-mail</label>
+        <input name="email" type="email" class="form-control" placeholder="seu@email.com" required>
       </div>
-
       <div class="mb-3">
         <label class="form-label">Senha</label>
-        <input name="senha" type="password" class="form-control" placeholder="Digite sua senha" required>
+        <input name="senha" type="password" class="form-control" placeholder="••••••••" required>
       </div>
-
-      <button type="submit" class="btn btn-primary w-100">Entrar</button>
+      <button type="submit" class="btn-auth">Entrar</button>
     </form>
 
     <?php
@@ -39,20 +43,21 @@
           $senha_correta = password_verify($senha, $usuario['senha']);
           if($usuario && $senha_correta){
             $_SESSION['nome'] = $usuario['nome'];
-            $_SESSION['acesso'] = true; 
+            $_SESSION['acesso'] = true;
             header('Location: Principal.php');
           } else {
-            echo "<p class='text-danger'>Credenciais inválidas!</p>";
+            echo "<div class='auth-alert'>⚠️ E-mail ou senha incorretos. Tente novamente.</div>";
           }
         } catch(Exception $e){
-          echo "Erro: ". $e->getMessage();
+          echo "<div class='auth-alert'>Erro: ". $e->getMessage() ."</div>";
         }
       }
     ?>
 
-    <p class="text-center mt-3">
-      Não tem conta? <a href="Cadastro.php">Cadastre-se</a>
-    </p>
+    <div class="auth-footer">
+      Não tem conta? <a href="Cadastro.php">Cadastre-se gratuitamente</a>
+    </div>
+
   </div>
 </div>
 
