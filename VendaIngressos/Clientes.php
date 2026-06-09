@@ -10,7 +10,7 @@
 ?>
 
 <h2>Clientes</h2>
-    <a href="NovoCliente.php" class="btn btn-success mb-3">Novo Registro</a>
+<a href="NovoCliente.php" class="btn btn-success mb-3">Novo Registro</a>
     <table class="table table-hover table-striped">
     <thead>
         <tr>
